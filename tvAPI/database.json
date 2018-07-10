@@ -1,19 +1,17 @@
 {
-  "posts": [
+  "users": [],
+  "shows": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "Breaking Bad",
+      "show": "A show about a guy with cancer who sells meth to pay for chemotherapy",
+      "seasons": "6",
+      "id": 1
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "Fresh Prince of Bel-Air",
+      "show": "A show starring Will Smith",
+      "seasons": "5",
+      "id": 2
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

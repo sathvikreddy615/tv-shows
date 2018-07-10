@@ -1,0 +1,17 @@
+#formContainer {
+    border: 1px solid black;
+    width: 200px;
+}
+
+#inputContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card {
+    border: 1px solid black;
+    width: 400px;
+    margin: 10px;
+    text-align: center;
+}
