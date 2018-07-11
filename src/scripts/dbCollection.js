@@ -8,6 +8,11 @@ const Database = Object.create({}, {
             return $.ajax("http://localhost:3000/shows");
         }
     },
+    getShowId: {
+        value: id => {
+            return $.ajax(`http://localhost:3000/shows/${id}`)
+        }
+    },
     postShows: {
         value: (newName, newShow, newSeasons) => {
             return $.ajax({
@@ -16,8 +21,7 @@ const Database = Object.create({}, {
                 data: {
                     name: newName,
                     show: newShow,
-                    seasons: newSeasons,
-                    watched: false
+                    seasons: newSeasons
                 }
             })
         }
@@ -31,6 +35,17 @@ const Database = Object.create({}, {
                     name: editName,
                     show: editShow,
                     seasons: editSeasons
+                }
+            })
+        }
+    },
+    archiveWatchedShows: {
+        value: id => {
+            return $.ajax({
+                url: `http://localhost:3000/shows/${id}`,
+                method: "PATCH",
+                data: {
+                    watched: true
                 }
             })
         }

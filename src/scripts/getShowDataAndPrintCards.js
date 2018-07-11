@@ -10,7 +10,9 @@ const GetShowDataAndPrintCards = Object.create({}, {
                 .then(data => {
                     console.log(data);
                     for (let i in data) {
-                        CardCreator.createCard(data[i].id, data[i].name, data[i].show, data[i].seasons); // calls cardCreator function with arguments passed to it
+                        if (data[i].watched !== "true") {
+                            CardCreator.createCard(data[i].id, data[i].name, data[i].show, data[i].seasons); // calls cardCreator function with arguments passed to it
+                        }
                     }
                 })
         }

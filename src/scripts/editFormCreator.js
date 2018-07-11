@@ -5,7 +5,7 @@ const PutEditFormValues = require("./putEditFormValues");
 
 const EditFormCreator = Object.create({}, {
     createEditForm: {
-        value: () => {
+        value: (id, editName, editPlot, editSeasons) => {
             const editFormContainer = document.querySelector("#editFormContainer");
 
             let inputContainer = document.createElement("div");
@@ -14,17 +14,17 @@ const EditFormCreator = Object.create({}, {
             let editNameEl = document.createElement("input");
             editNameEl.id = "editNameVal";
             editNameEl.type = "text";
-            editNameEl.placeholder = "Name of Show";
+            editNameEl.value = editName;
 
             let editPlotEl = document.createElement("input");
             editPlotEl.id = "editPlotVal";
             editPlotEl.type = "text";
-            editPlotEl.placeholder = "Plot Summary";
+            editPlotEl.value = editPlot;
 
             let editSeasonsEl = document.createElement("input");
             editSeasonsEl.id = "editSeasonsVal";
             editSeasonsEl.type = "number";
-            editSeasonsEl.placeholder = "# of Seasons";
+            editSeasonsEl.value = editSeasons;
 
             inputContainer.appendChild(editNameEl);
             inputContainer.appendChild(editPlotEl);
@@ -32,12 +32,12 @@ const EditFormCreator = Object.create({}, {
 
             let saveBtn = document.createElement("button");
             saveBtn.id = "saveBtn";
-            saveBtn.textContent = "Save Show";
+            saveBtn.textContent = "Save";
             saveBtn.addEventListener("click", PutEditFormValues.putEditFormData);
 
             let deleteBtn = document.createElement("button");
             deleteBtn.id = "deleteBtn";
-            deleteBtn.textContent = "Delete Show";
+            deleteBtn.textContent = "Delete";
             deleteBtn.addEventListener("click", DeleteShowData.removeShow)
 
             editFormContainer.appendChild(inputContainer);
@@ -47,4 +47,4 @@ const EditFormCreator = Object.create({}, {
     }
 })
 
-module.exports = EditFormCreator; // exports to cardCreator.js and putEditFormValues.js
+module.exports = EditFormCreator; // exports to cardCreator.js and getEditFormValues.js

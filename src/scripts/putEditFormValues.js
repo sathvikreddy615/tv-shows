@@ -1,19 +1,17 @@
 
 const Database = require("./dbCollection");
-const GetEditFormValues = require("./getEditFormValues");
 
 const PutEditFormValues = Object.create({}, {
     putEditFormData: {
         value: () => {
-            const editFormData = GetEditFormValues.getEditFormData();
-            console.log(editFormData);
+            let editNameVal = document.querySelector("#editNameVal").value;
+            let editPlotVal = document.querySelector("#editPlotVal").value;
+            let editSeasonsVal = document.querySelector("#editSeasonsVal").value;
 
-            const showId = event.target.parentNode.id;
-
-            Database.putShows(3, editFormData.editNameVal, editFormData.editPlotVal, editFormData.editSeasonsVal)
-            .then(updatedShow => {
-                console.log(updatedShow);
-            })
+            Database.putShows(3, editNameVal, editPlotVal, editSeasonsVal)
+                .then(updatedShow => {
+                    console.log(updatedShow);
+                })
         }
     }
 })

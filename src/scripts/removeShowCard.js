@@ -3,9 +3,9 @@ const Database = require("./dbCollection");
 const RemoveShowCard = Object.create({}, {
     removeShow: {
         value: () => {
-            if (event.target) {
-                event.target.parentNode.remove();
-                // how to change boolean value from false to true in JSON
+            if (event.target.className === "checkBox") {
+                let watchedShowId = event.target.parentNode.id;
+                Database.archiveWatchedShows(watchedShowId);
             }
         }
     }

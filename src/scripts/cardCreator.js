@@ -1,5 +1,5 @@
 // file that creates cards for TV Show data to be displayed on
-const EditFormCreator = require("./editFormCreator");
+const GetEditData = require("./getEditData");
 const DeleteShowData = require("./deleteShowData");
 const RemoveShowCard = require("./removeShowCard");
 
@@ -16,14 +16,14 @@ const CardCreator = Object.create({}, {
             nameEl.textContent = showName;
             nameEl.href = "#";
             nameEl.setAttribute("class", "cardName");
-            nameEl.addEventListener("click", EditFormCreator.createEditForm)
+            nameEl.addEventListener("click", GetEditData.getEditFormData);
 
             const plotEl = document.createElement("p");
-            plotEl.textContent = showPlot;
+            plotEl.textContent = `Summary: ${showPlot}`;
             plotEl.setAttribute("class", "cardPlot");
 
             const seasonsEl = document.createElement("p");
-            seasonsEl.textContent = showSeasons;
+            seasonsEl.textContent = `Seasons: ${showSeasons}`;
             seasonsEl.setAttribute("class", "cardSeasons");
 
             const checkBox = document.createElement("input");
