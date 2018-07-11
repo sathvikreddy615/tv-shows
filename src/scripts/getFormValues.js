@@ -20,10 +20,9 @@ const GetFormValues = Object.create({}, {
             };
 
             return newObject;
-
         }
     },
 
 });
 
-module.exports = GetFormValues;
+module.exports = GetFormValues; // exports to postFormValues.js

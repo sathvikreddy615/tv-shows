@@ -6,13 +6,7 @@ const EventHandler = Object.create({}, {
            const saveBtn = document.querySelector("#saveBtn");
            saveBtn.addEventListener("click", PostFormValues.postFormData);
         }
-    },
-    deleteBtnClick: {
-        value: () => {
-            const deleteBtn = document.querySelector("#deletebtn");
-            deleteBtn.addEventListener("click", () => {});
-        }
     }
 })
 
-module.exports = EventHandler;
+module.exports = EventHandler; // exports to main.js

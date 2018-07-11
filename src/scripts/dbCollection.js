@@ -8,6 +8,11 @@ const Database = Object.create({}, {
             return $.ajax("http://localhost:3000/shows");
         }
     },
+    getShowId: {
+        value: id => {
+            return $.ajax(`http://localhost:3000/shows/${id}`)
+        }
+    },
     postShows: {
         value: (newName, newShow, newSeasons) => {
             return $.ajax({
@@ -21,15 +26,26 @@ const Database = Object.create({}, {
             })
         }
     },
-    editShows: {
-        value: (editName, editShow, editSeasons) => {
+    putShows: {
+        value: (id, editName, editShow, editSeasons) => {
             return $.ajax({
-                url: "http://localhost:3000/shows",
+                url: `http://localhost:3000/shows/${id}`,
                 method: "PUT",
                 data: {
                     name: editName,
                     show: editShow,
                     seasons: editSeasons
+                }
+            })
+        }
+    },
+    archiveWatchedShows: {
+        value: id => {
+            return $.ajax({
+                url: `http://localhost:3000/shows/${id}`,
+                method: "PATCH",
+                data: {
+                    watched: true
                 }
             })
         }
@@ -44,4 +60,4 @@ const Database = Object.create({}, {
     }
 })
 
-module.exports = Database;
+module.exports = Database; // exports to many

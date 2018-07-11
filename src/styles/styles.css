@@ -3,6 +3,10 @@
     width: 200px;
 }
 
+#editFormContainer {
+    width: 200px;
+}
+
 #inputContainer {
     display: flex;
     flex-direction: column;

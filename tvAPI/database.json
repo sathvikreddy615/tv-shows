@@ -2,16 +2,25 @@
   "users": [],
   "shows": [
     {
-      "name": "Breaking Bad",
-      "show": "A show about a guy with cancer who sells meth to pay for chemotherapy",
-      "seasons": "6",
-      "id": 1
-    },
-    {
       "name": "Fresh Prince of Bel-Air",
       "show": "A show starring Will Smith",
       "seasons": "5",
+      "watched": "false",
+      "id": 1
+    },
+    {
+      "name": "Breaking Bad",
+      "show": "A show about a guy with cancer who sells meth to pay for chemotherapy",
+      "seasons": "6",
+      "watched": "false",
       "id": 2
+    },
+    {
+      "name": "Parks and Rec",
+      "show": "It is about parks and stuff",
+      "seasons": "7",
+      "watched": "false",
+      "id": 3
     }
   ]
 }
