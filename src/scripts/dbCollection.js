@@ -16,15 +16,16 @@ const Database = Object.create({}, {
                 data: {
                     name: newName,
                     show: newShow,
-                    seasons: newSeasons
+                    seasons: newSeasons,
+                    watched: false
                 }
             })
         }
     },
-    editShows: {
-        value: (editName, editShow, editSeasons) => {
+    putShows: {
+        value: (id, editName, editShow, editSeasons) => {
             return $.ajax({
-                url: "http://localhost:3000/shows",
+                url: `http://localhost:3000/shows/${id}`,
                 method: "PUT",
                 data: {
                     name: editName,
@@ -44,4 +45,4 @@ const Database = Object.create({}, {
     }
 })
 
-module.exports = Database;
+module.exports = Database; // exports to many

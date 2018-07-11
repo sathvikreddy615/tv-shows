@@ -6,7 +6,6 @@ const DeleteShowData = Object.create({}, {
     removeShow: {
         value: () => {
             const showId = event.target.parentNode.id;
-            console.log(showId);
             Database.deleteShows(showId)
                 .then(data => {
                     console.log(data);
@@ -15,4 +14,4 @@ const DeleteShowData = Object.create({}, {
     }
 })
 
-module.exports = DeleteShowData;
+module.exports = DeleteShowData; // exports to cardCreator.js

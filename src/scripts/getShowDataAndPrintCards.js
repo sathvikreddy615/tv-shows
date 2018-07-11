@@ -10,11 +10,11 @@ const GetShowDataAndPrintCards = Object.create({}, {
                 .then(data => {
                     console.log(data);
                     for (let i in data) {
-                        CardCreator.createCard(data[i].name, data[i].show, data[i].seasons); // calls cardCreator function with arguments passed to it
+                        CardCreator.createCard(data[i].id, data[i].name, data[i].show, data[i].seasons); // calls cardCreator function with arguments passed to it
                     }
                 })
         }
     }
 })
 
-module.exports = GetShowDataAndPrintCards;
+module.exports = GetShowDataAndPrintCards; // exports to main.js

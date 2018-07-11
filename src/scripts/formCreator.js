@@ -37,4 +37,4 @@ const FormCreator = Object.create({}, {
     }
 })
 
-module.exports = FormCreator;
+module.exports = FormCreator; // exports to getFormValues.js

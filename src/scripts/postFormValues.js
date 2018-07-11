@@ -16,4 +16,4 @@ const PostFormValues = Object.create({}, {
     }
 })
 
-module.exports = PostFormValues;
+module.exports = PostFormValues; // exports to eventHandlers.js
